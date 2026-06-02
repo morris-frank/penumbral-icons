@@ -1,0 +1,16 @@
+[
+  {
+    "id": "notion",
+    "lightBg": "#ffffff",
+    "darkBg": "#191919",
+    "lightFg": "#191919",
+    "darkFg": "#ffffff"
+  },
+  {
+    "id": "linear",
+    "lightBg": "#fcfcfd",
+    "darkBg": "#0f1010",
+    "lightFg": "#0f1010",
+    "darkFg": "#ffffff"
+  }
+]

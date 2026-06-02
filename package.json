@@ -1,0 +1,15 @@
+{
+  "name": "themesafe-icons",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node ./scripts/build.mjs",
+    "verify": "node ./scripts/verify.mjs"
+  },
+  "dependencies": {
+    "@lobehub/icons": "^5.10.0",
+    "sharp": "^0.34.5",
+    "simple-icons": "^16.22.0"
+  }
+}
