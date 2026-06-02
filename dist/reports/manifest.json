@@ -1,0 +1,522 @@
+[
+  {
+    "slug": "anthropic",
+    "label": "Anthropic",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "Anthropic",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/anthropic.png",
+      "linear": "dist/linear/emoji/anthropic.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "claude",
+    "label": "Claude",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "Claude",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/claude.png",
+      "linear": "dist/linear/emoji/claude.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "clerk",
+    "label": "Clerk",
+    "status": "generated",
+    "sourceType": "simple-icons",
+    "sourceRef": "clerk",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/clerk.png",
+      "linear": "dist/linear/emoji/clerk.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "cursor",
+    "label": "Cursor",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "Cursor",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/cursor.png",
+      "linear": "dist/linear/emoji/cursor.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "github",
+    "label": "GitHub",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "Github",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/github.png",
+      "linear": "dist/linear/emoji/github.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "google-cloud",
+    "label": "Google Cloud",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "GoogleCloud",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/google-cloud.png",
+      "linear": "dist/linear/emoji/google-cloud.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "google-earth-engine",
+    "label": "Google Earth Engine",
+    "status": "generated",
+    "sourceType": "simple-icons",
+    "sourceRef": "googleearthengine",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/google-earth-engine.png",
+      "linear": "dist/linear/emoji/google-earth-engine.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "gemini",
+    "label": "Gemini",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "Gemini",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/gemini.png",
+      "linear": "dist/linear/emoji/gemini.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "grok",
+    "label": "Grok",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "XAI",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/grok.png",
+      "linear": "dist/linear/emoji/grok.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "hubspot",
+    "label": "HubSpot",
+    "status": "generated",
+    "sourceType": "simple-icons",
+    "sourceRef": "hubspot",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/hubspot.png",
+      "linear": "dist/linear/emoji/hubspot.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "hugging-face",
+    "label": "Hugging Face",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "HuggingFace",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/hugging-face.png",
+      "linear": "dist/linear/emoji/hugging-face.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "infisical",
+    "label": "Infisical",
+    "status": "generated",
+    "sourceType": "official-url",
+    "sourceRef": "https://raw.githubusercontent.com/Infisical/infisical/main/frontend/public/images/gradientLogo.svg",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/infisical.png",
+      "linear": "dist/linear/emoji/infisical.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "inngest",
+    "label": "Inngest",
+    "status": "generated",
+    "sourceType": "official-url",
+    "sourceRef": "https://www.inngest.com/logo-with-icon-white.svg",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/inngest.png",
+      "linear": "dist/linear/emoji/inngest.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "jira",
+    "label": "Jira",
+    "status": "generated",
+    "sourceType": "simple-icons",
+    "sourceRef": "jira",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/jira.png",
+      "linear": "dist/linear/emoji/jira.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "linear",
+    "label": "Linear",
+    "status": "generated",
+    "sourceType": "simple-icons",
+    "sourceRef": "linear",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/linear.png",
+      "linear": "dist/linear/emoji/linear.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "microsoft",
+    "label": "Microsoft",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "Microsoft",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/microsoft.png",
+      "linear": "dist/linear/emoji/microsoft.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "microsoft-excel",
+    "label": "Microsoft Excel",
+    "status": "generated",
+    "sourceType": "official-url",
+    "sourceRef": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/microsoft-excel.png",
+      "linear": "dist/linear/emoji/microsoft-excel.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "microsoft-powerpoint",
+    "label": "Microsoft PowerPoint",
+    "status": "generated",
+    "sourceType": "official-url",
+    "sourceRef": "https://upload.wikimedia.org/wikipedia/commons/2/25/Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/microsoft-powerpoint.png",
+      "linear": "dist/linear/emoji/microsoft-powerpoint.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "microsoft-teams",
+    "label": "Microsoft Teams",
+    "status": "generated",
+    "sourceType": "official-url",
+    "sourceRef": "https://upload.wikimedia.org/wikipedia/commons/9/94/Microsoft_Office_Teams_%282019%E2%80%932025%29.svg",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/microsoft-teams.png",
+      "linear": "dist/linear/emoji/microsoft-teams.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "microsoft-word",
+    "label": "Microsoft Word",
+    "status": "generated",
+    "sourceType": "official-url",
+    "sourceRef": "https://upload.wikimedia.org/wikipedia/commons/1/19/Microsoft_Office_Word_%282019%E2%80%932025%29.svg",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/microsoft-word.png",
+      "linear": "dist/linear/emoji/microsoft-word.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "n8n",
+    "label": "n8n",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "N8n",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/n8n.png",
+      "linear": "dist/linear/emoji/n8n.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "neon",
+    "label": "Neon",
+    "status": "generated",
+    "sourceType": "simple-icons",
+    "sourceRef": "neon",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/neon.png",
+      "linear": "dist/linear/emoji/neon.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "nextjs",
+    "label": "Next.js",
+    "status": "generated",
+    "sourceType": "simple-icons",
+    "sourceRef": "nextdotjs",
+    "strategy": "auto-svg",
+    "outputs": {
+      "notion": "dist/notion/emoji/nextjs.png",
+      "linear": "dist/linear/emoji/nextjs.png",
+      "autoSvg": {
+        "notion": "dist/svg-auto/notion/nextjs.svg",
+        "linear": "dist/svg-auto/linear/nextjs.svg"
+      }
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "notebooklm",
+    "label": "NotebookLM",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "NotebookLM",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/notebooklm.png",
+      "linear": "dist/linear/emoji/notebooklm.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "notion",
+    "label": "Notion",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "Notion",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/notion.png",
+      "linear": "dist/linear/emoji/notion.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "onedrive",
+    "label": "OneDrive",
+    "status": "generated",
+    "sourceType": "official-url",
+    "sourceRef": "https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_OneDrive_Icon_(2025_-_present).svg",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/onedrive.png",
+      "linear": "dist/linear/emoji/onedrive.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "openrouter",
+    "label": "OpenRouter",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "OpenRouter",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/openrouter.png",
+      "linear": "dist/linear/emoji/openrouter.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "openai",
+    "label": "OpenAI",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "OpenAI",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/openai.png",
+      "linear": "dist/linear/emoji/openai.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "codex",
+    "label": "Codex",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "Codex",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/codex.png",
+      "linear": "dist/linear/emoji/codex.png"
+    },
+    "needsManualReview": false,
+    "notes": "No canonical Codex icon expected; OpenAI fallback may be used."
+  },
+  {
+    "slug": "oxford-nanopore",
+    "label": "Oxford Nanopore",
+    "status": "generated",
+    "sourceType": "official-url",
+    "sourceRef": "https://nanoporetech.com/nano-assets/ont-logo.svg",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/oxford-nanopore.png",
+      "linear": "dist/linear/emoji/oxford-nanopore.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "postgres",
+    "label": "Postgres",
+    "status": "generated",
+    "sourceType": "simple-icons",
+    "sourceRef": "postgresql",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/postgres.png",
+      "linear": "dist/linear/emoji/postgres.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "sentry",
+    "label": "Sentry",
+    "status": "generated",
+    "sourceType": "simple-icons",
+    "sourceRef": "sentry",
+    "strategy": "auto-svg",
+    "outputs": {
+      "notion": "dist/notion/emoji/sentry.png",
+      "linear": "dist/linear/emoji/sentry.png",
+      "autoSvg": {
+        "notion": "dist/svg-auto/notion/sentry.svg",
+        "linear": "dist/svg-auto/linear/sentry.svg"
+      }
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "shadcn",
+    "label": "shadcn/ui",
+    "status": "generated",
+    "sourceType": "simple-icons",
+    "sourceRef": "shadcnui",
+    "strategy": "auto-svg",
+    "outputs": {
+      "notion": "dist/notion/emoji/shadcn.png",
+      "linear": "dist/linear/emoji/shadcn.png",
+      "autoSvg": {
+        "notion": "dist/svg-auto/notion/shadcn.svg",
+        "linear": "dist/svg-auto/linear/shadcn.svg"
+      }
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "snakemake",
+    "label": "Snakemake",
+    "status": "generated",
+    "sourceType": "official-url",
+    "sourceRef": "https://snakemake.github.io",
+    "strategy": "composed",
+    "outputs": {
+      "notion": "dist/notion/emoji/snakemake.png",
+      "linear": "dist/linear/emoji/snakemake.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "vercel",
+    "label": "Vercel",
+    "status": "generated",
+    "sourceType": "lobehub",
+    "sourceRef": "Vercel",
+    "strategy": "auto-svg",
+    "outputs": {
+      "notion": "dist/notion/emoji/vercel.png",
+      "linear": "dist/linear/emoji/vercel.png",
+      "autoSvg": {
+        "notion": "dist/svg-auto/notion/vercel.svg",
+        "linear": "dist/svg-auto/linear/vercel.svg"
+      }
+    },
+    "needsManualReview": false,
+    "notes": ""
+  },
+  {
+    "slug": "vite",
+    "label": "Vite",
+    "status": "generated",
+    "sourceType": "simple-icons",
+    "sourceRef": "vite",
+    "strategy": "canonical",
+    "outputs": {
+      "notion": "dist/notion/emoji/vite.png",
+      "linear": "dist/linear/emoji/vite.png"
+    },
+    "needsManualReview": false,
+    "notes": ""
+  }
+]
