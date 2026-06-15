@@ -6,7 +6,197 @@
   <title>Penumbral Icons - Theme-Safe Icon Pack</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="design-tokens.css">
+  <style>
+/*
+  Maurice Frank - Design Tokens
+  Inspired by the warm, editorial, alpine aesthetic of the "Atlas Sketch".
+  Date: June 15, 2026
+*/
+
+@font-face {  
+  font-family: "Libertinus Sans";
+  src: url("/LibertinusSans-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libertinus Sans";
+  src: url("/LibertinusSans-Italic.otf") format("opentype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libertinus Sans";
+  src: url("/LibertinusSans-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* --- Color Palette (Sampled from Image) --- */
+  
+  /* Neutrals (Warm, organic linen & stone) */
+  --color-neutral-50:  #FAF8F5; /* Alabaster / Softest Warm White */
+  --color-neutral-100: #F3EFEA; /* Linen / Primary Background */
+  --color-neutral-200: #EAE4DA; /* Sand / Secondary Background */
+  --color-neutral-300: #DCD4C7; /* Stone / Muted Borders & Backgrounds */
+  --color-neutral-400: #B8AC9D; /* Clay / Muted Text & Borders */
+  --color-neutral-600: #8C7E72; /* Warm Gray / Secondary Text */
+  --color-neutral-800: #51463E; /* Dark Earth / Muted Headings */
+  --color-neutral-900: #2D2825; /* Charcoal / Primary Text */
+
+  /* Accents (Alpine & Sunset tones) */
+  --color-accent-terracotta:       #D78A7A; /* Sunset Peak (Warm Coral/Terracotta) */
+  --color-accent-terracotta-light: #F5D6D0; /* Soft Terracotta Tint */
+  --color-accent-glacier:          #7E9688; /* Glacier Green (Muted Sage/Teal) */
+  --color-accent-glacier-light:    #C4D3CB; /* Soft Glacier Tint */
+  --color-accent-ochre:            #A78D73; /* Mountain Ochre (Warm Gold/Brown) */
+  --color-accent-slate:            #4A3E36; /* Deep Alpine Slate (Dark Shadow Brown) */
+
+  /* Semantic Colors */
+  --bg-primary:    var(--color-neutral-100);
+  --bg-secondary:  var(--color-neutral-200);
+  --bg-card:       rgba(250, 248, 245, 0.75); /* Translucent Alabaster */
+  
+  --text-primary:   var(--color-neutral-900);
+  --text-secondary: var(--color-neutral-600);
+  --text-muted:     var(--color-neutral-400);
+  --text-accent:    var(--color-accent-terracotta);
+
+  --border-light:  rgba(255, 255, 255, 0.4);
+  --border-medium: var(--color-neutral-300);
+  --border-dark:   var(--color-neutral-800);
+
+  /* --- Typography --- */
+  
+  /* Font Families */
+  --font-sans:  "Libertinus Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Font Sizes (Modular Scale - 1.25 Ratio) */
+  --font-size-xs:   0.8rem;
+  --font-size-sm:   0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md:   1.25rem;
+  --font-size-lg:   1.563rem;
+  --font-size-xl:   1.953rem;
+  --font-size-2xl:  2.441rem;
+  --font-size-3xl:  3.052rem;
+
+  /* Font Weights */
+  --font-weight-light:  300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold:   700;
+
+  /* Line Heights */
+  --line-height-tight:  1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Letter Spacing */
+  --letter-spacing-tight:  -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide:   0.05em;
+  --letter-spacing-widest: 0.15em;
+
+  /* --- Spacing (Modular Scale) --- */
+  --spacing-xs:  0.25rem;
+  --spacing-sm:  0.5rem;
+  --spacing-md:  1rem;
+  --spacing-lg:  1.5rem;
+  --spacing-xl:  2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* --- Borders & Effects --- */
+  --radius-sm:   2px;
+  --radius-md:   4px;
+  --radius-lg:   8px;
+  --radius-full: 9999px;
+
+  /* Glassmorphism / Translucency */
+  --blur-card: blur(12px);
+  --shadow-card: 0 10px 30px -10px rgba(81, 70, 62, 0.15), 
+                 0 1px 3px rgba(81, 70, 62, 0.05);
+
+  /* Transitions */
+  --transition-fast:   0.15s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* --- Basic Reset & Utility Styles using Tokens --- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--color-neutral-900);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-normal);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+.font-sans  { font-family: var(--font-sans); }
+
+.text-xs   { font-size: var(--font-size-xs); }
+.text-sm   { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-md   { font-size: var(--font-size-md); }
+.text-lg   { font-size: var(--font-size-lg); }
+.text-xl   { font-size: var(--font-size-xl); }
+.text-2xl  { font-size: var(--font-size-2xl); }
+.text-3xl  { font-size: var(--font-size-3xl); }
+
+.text-primary   { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted      { color: var(--text-muted); }
+.text-accent     { color: var(--text-accent); }
+
+.tracking-tight  { letter-spacing: var(--letter-spacing-tight); }
+.tracking-normal { letter-spacing: var(--letter-spacing-normal); }
+.tracking-wide   { letter-spacing: var(--letter-spacing-wide); }
+.tracking-widest { letter-spacing: var(--letter-spacing-widest); }
+
+/* Layout & Card Utilities */
+.card {
+  background-color: var(--bg-card);
+  backdrop-filter: var(--blur-card);
+  -webkit-backdrop-filter: var(--blur-card);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-card);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-sm);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+}
+  </style>
   <script>
     tailwind.config = {
       darkMode: 'class',
