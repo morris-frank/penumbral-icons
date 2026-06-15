@@ -2,6 +2,8 @@
 
 Builds app-specific custom emoji assets that remain usable across light and dark UI themes.
 
+[penumbral-icons.maurice-frank.com](https://penumbral-icons.maurice-frank.com)
+
 ## Usage
 
 ```bash
