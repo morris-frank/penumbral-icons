@@ -97,7 +97,7 @@ async function fetchText(url) {
     try {
       const response = await fetch(url, {
         headers: {
-          'user-agent': 'themesafe-icons-builder/0.1',
+          'user-agent': 'penumbral-icons-builder/0.1',
         },
       });
       if (!response.ok) {
