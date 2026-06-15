@@ -12,30 +12,6 @@
   Date: June 15, 2026
 */
 
-@font-face {  
-  font-family: "Libertinus Sans";
-  src: url("/LibertinusSans-Regular.otf") format("opentype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Libertinus Sans";
-  src: url("/LibertinusSans-Italic.otf") format("opentype");
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Libertinus Sans";
-  src: url("/LibertinusSans-Bold.otf") format("opentype");
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
 :root {
   /* --- Color Palette (Sampled from Image) --- */
   
@@ -74,7 +50,7 @@
   /* --- Typography --- */
   
   /* Font Families */
-  --font-sans:  "Libertinus Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans:  "andale mono", andale mono, monospace;
 
   /* Font Sizes (Modular Scale - 1.25 Ratio) */
   --font-size-xs:   0.8rem;
@@ -120,8 +96,6 @@
 
   /* Glassmorphism / Translucency */
   --blur-card: blur(12px);
-  --shadow-card: 0 10px 30px -10px rgba(81, 70, 62, 0.15), 
-                 0 1px 3px rgba(81, 70, 62, 0.05);
 
   /* Transitions */
   --transition-fast:   0.15s ease;
@@ -185,7 +159,6 @@ p {
   backdrop-filter: var(--blur-card);
   -webkit-backdrop-filter: var(--blur-card);
   border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-card);
   padding: var(--spacing-xl);
   border-radius: var(--radius-sm);
 }
@@ -202,8 +175,8 @@ p {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Libertinus Sans"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
+            sans: ['"andale mono"', 'andale mono', 'monospace'],
+            mono: ['"andale mono"', 'andale mono', 'monospace'],
           },
           colors: {
             neutral: {
@@ -271,179 +244,68 @@ p {
     }
   </style>
 </head>
-<body class="font-sans min-h-full flex flex-col antialiased selection:bg-accent-terracotta/20 selection:text-neutral-900">
+<body class="font-sans min-h-screen flex flex-col antialiased selection:bg-accent-terracotta/20 selection:text-neutral-900">
 
-  <!-- Header Section -->
-  <header class="border-b border-neutral-300 bg-neutral-100/80 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <h1 class="text-lg font-bold tracking-tight text-neutral-900 flex items-center gap-2">
+  <main class="flex-grow w-full px-4 sm:px-6 lg:px-8 py-4 flex flex-col gap-4">
+
+    <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+      <a href="https://github.com/morris-frank/penumbral-icons" target="_blank" rel="noopener noreferrer" class="text-xs text-neutral-600 hover:text-neutral-900 transition-colors w-fit">
         morris-frank/penumbral-icons
-      </h1>
-      <a href="https://github.com/morris-frank/penumbral-icons" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors flex items-center gap-2 px-3 py-1.5 rounded-sm hover:bg-neutral-200/60 border border-transparent hover:border-neutral-300">
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 .297c-6.63 0-11 5.373-11 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-4.373-12-11-12"></path>
-        </svg></a>
+      </a>
+      <div class="flex items-center justify-end gap-4 shrink-0">
+        <input type="text" id="search-input" oninput="handleFilterChange()" placeholder="search" class="w-40 sm:w-52 bg-transparent border-b border-neutral-300 h-7 py-0 text-xs leading-none text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-neutral-600 transition-colors">
+        <div class="flex items-center gap-2 text-xs h-7 leading-none">
+          <button id="profile-btn-notion" type="button" onclick="setAppProfile('notion')" class="text-neutral-900 transition-colors">notion</button>
+          <span class="text-neutral-300">/</span>
+          <button id="profile-btn-linear" type="button" onclick="setAppProfile('linear')" class="text-neutral-400 hover:text-neutral-600 transition-colors">linear</button>
+        </div>
+      </div>
     </div>
-  </header>
 
-  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col gap-10">
-    
-    <!-- Interactive Grid Area -->
-    <section class="flex flex-col gap-6">
-      
-      <!-- Filters and Config Row -->
-      <div class="flex flex-col md:flex-row gap-4 items-stretch justify-between bg-neutral-50/50 border border-neutral-300 rounded-sm p-4 shadow-sm">
-        
-        <!-- Search -->
-        <div class="relative flex-grow max-w-md">
-          <div class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-neutral-400">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </div>
-          <input type="text" id="search-input" oninput="handleFilterChange()" placeholder="Search by name, slug or alias..." class="w-full pl-10 pr-4 py-2 bg-neutral-50 border border-neutral-300 rounded-sm text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-accent-terracotta focus:ring-1 focus:ring-accent-terracotta transition-all">
-        </div>
+    <div id="icons-grid" class="grid gap-x-8 gap-y-10 w-full min-h-[120px] pt-2" style="grid-template-columns: repeat(auto-fill, 8rem);">
+      <div class="col-span-full py-8 text-xs text-neutral-400">loading…</div>
+    </div>
 
-        <!-- Right Side: Profile Select & Extra filters -->
-        <div class="flex flex-wrap items-center gap-3">
-          <!-- Profile Selector (Notion vs Linear) -->
-          <div class="flex items-center gap-2">
-            <span class="text-xs text-neutral-600 font-medium whitespace-nowrap">App Profile:</span>
-            <div class="flex bg-neutral-200 border border-neutral-300 rounded-sm p-0.5 text-xs">
-              <button id="profile-btn-notion" onclick="setAppProfile('notion')" class="px-3 py-1.5 rounded-sm font-semibold transition-all bg-accent-terracotta text-white shadow-sm flex items-center">
-                Notion
-              </button>
-              <button id="profile-btn-linear" onclick="setAppProfile('linear')" class="px-3 py-1.5 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all flex items-center">
-                Linear
-              </button>
-            </div>
-          </div>
+    <div id="empty-state" class="hidden py-8 text-xs text-neutral-400">
+      no icons match
+      <button type="button" onclick="resetFilters()" class="ml-2 text-neutral-600 hover:text-neutral-900 transition-colors">reset</button>
+    </div>
 
-          <!-- Strategy Filter -->
-          <select id="strategy-filter" onchange="handleFilterChange()" class="bg-neutral-50 border border-neutral-300 text-neutral-800 text-xs rounded-sm px-3 py-1.5 focus:outline-none focus:border-accent-terracotta focus:ring-1 focus:ring-accent-terracotta">
-            <option value="all">All Strategies</option>
-            <option value="composed">Composed Only</option>
-            <option value="canonical">Canonical Only</option>
-            <option value="auto-svg">Auto-SVG Only</option>
-          </select>
-
-          <!-- Status Filter -->
-          <select id="status-filter" onchange="handleFilterChange()" class="bg-neutral-50 border border-neutral-300 text-neutral-800 text-xs rounded-sm px-3 py-1.5 focus:outline-none focus:border-accent-terracotta focus:ring-1 focus:ring-accent-terracotta">
-            <option value="all">All Statuses</option>
-            <option value="generated">Generated Successfully</option>
-            <option value="manual_review">Needs Manual Review</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Main Icons Grid -->
-      <div id="icons-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 min-h-[200px]">
-        <!-- Cards injected dynamically -->
-        <div class="col-span-full py-12 flex flex-col items-center justify-center gap-3 text-neutral-400">
-          <div class="w-8 h-8 rounded-full border-2 border-neutral-300 border-t-accent-terracotta animate-spin"></div>
-          <span class="text-sm font-medium">Loading icon manifest...</span>
-        </div>
-      </div>
-
-      <!-- Empty State -->
-      <div id="empty-state" class="hidden py-16 flex flex-col items-center justify-center text-center bg-neutral-50/20 border border-neutral-300 rounded-sm">
-        <div class="w-12 h-12 rounded-sm bg-neutral-50 border border-neutral-300 flex items-center justify-center text-neutral-400 mb-4 shadow-sm">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
-            <line x1="9" y1="9" x2="9.01" y2="9"></line>
-            <line x1="15" y1="9" x2="15.01" y2="9"></line>
-          </svg>
-        </div>
-        <h4 class="text-sm font-semibold text-neutral-900">No icons match your filters</h4>
-        <p class="text-xs text-neutral-600 mt-1 max-w-sm">Try adjusting your search terms, app profile, or rendering strategies.</p>
-        <button onclick="resetFilters()" class="mt-4 px-4 py-1.5 bg-neutral-800 hover:bg-neutral-900 text-white rounded-sm text-xs font-semibold transition-all">Reset All Filters</button>
-      </div>
-
-    </section>
+    <footer class="mt-auto text-[10px] text-neutral-400/50 py-2">
+      penumbral icons · sharp, lobehub icons, simple icons
+    </footer>
 
   </main>
 
-  <!-- Footer Section -->
-  <footer class="border-t border-neutral-300 bg-neutral-200/40 py-8 text-xs text-neutral-600 text-center">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-1.5">
-        <svg class="w-4 h-4 text-accent-terracotta" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86z"/>
-        </svg>
-        <span>Penumbral Icons &copy; 2026. Built with Sharp, LobeHub Icons, and Simple Icons.</span>
-      </div>
-      <div>
-        <span>Deployable to GitHub Pages &amp; Cloudflare Pages</span>
-      </div>
-    </div>
-  </footer>
-
   <!-- Modal for full details -->
-  <div id="details-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-accent-slate/40 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-neutral-50 border border-neutral-300 rounded-sm max-w-xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-2xl animate-in fade-in zoom-in-95 duration-200">
-      <!-- Modal Header -->
-      <div class="flex items-center justify-between p-5 border-b border-neutral-200">
-        <h4 id="modal-label" class="text-base font-bold text-neutral-900">Icon Details</h4>
-        <button onclick="closeModal()" class="w-8 h-8 rounded-sm bg-neutral-200 hover:bg-neutral-300 text-neutral-600 hover:text-neutral-900 flex items-center justify-center transition-all">
+  <div id="details-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-accent-slate/40 backdrop-blur-sm flex items-center justify-center p-4" onclick="if (event.target === this) closeModal()">
+    <div class="bg-neutral-50 max-w-xl w-full max-h-[90vh] overflow-hidden flex flex-col shadow-[0_24px_64px_-12px_rgba(45,40,37,0.38),0_12px_32px_-16px_rgba(45,40,37,0.22)] animate-in fade-in zoom-in-95 duration-200" onclick="event.stopPropagation()">
+      <div class="relative">
+        <button type="button" onclick="closeModal()" class="absolute top-2 right-2 z-10 w-7 h-7 text-neutral-600 hover:text-neutral-900 flex items-center justify-center transition-colors" aria-label="Close">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
+        <div class="grid grid-cols-2 gap-0">
+          <div id="modal-preview-light" class="h-44 flex items-center justify-center bg-white relative overflow-hidden">
+            <img id="modal-img-light" src="" alt="Light preview" class="w-28 h-28 object-contain relative">
+          </div>
+          <div id="modal-preview-dark" class="h-44 flex items-center justify-center bg-[#191919] relative overflow-hidden">
+            <img id="modal-img-dark" src="" alt="Dark preview" class="w-28 h-28 object-contain relative">
+          </div>
+        </div>
       </div>
-      <!-- Modal Content -->
-      <div class="p-5 overflow-y-auto custom-scrollbar flex flex-col gap-5">
-        <!-- Preview Grid in Modal -->
-        <div class="grid grid-cols-2 gap-4">
-          <div class="flex flex-col gap-1.5">
-            <span class="text-[10px] text-neutral-600 font-bold uppercase tracking-wider">Light Theme Appearance</span>
-            <div id="modal-preview-light" class="h-28 rounded-sm border border-neutral-300 flex items-center justify-center bg-white shadow-inner relative overflow-hidden">
-              <!-- Grid background pattern -->
-              <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
-              <img id="modal-img-light" src="" alt="Light preview" class="w-16 h-16 object-contain z-10 relative">
-            </div>
-          </div>
-          <div class="flex flex-col gap-1.5">
-            <span class="text-[10px] text-neutral-600 font-bold uppercase tracking-wider">Dark Theme Appearance</span>
-            <div id="modal-preview-dark" class="h-28 rounded-sm border border-neutral-800 flex items-center justify-center bg-[#191919] shadow-inner relative overflow-hidden">
-              <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px] opacity-5"></div>
-              <img id="modal-img-dark" src="" alt="Dark preview" class="w-16 h-16 object-contain z-10 relative">
-            </div>
-          </div>
-        </div>
-
-        <!-- Technical Attributes -->
-        <div class="flex flex-col gap-3">
-          <span class="text-[10px] text-neutral-600 font-bold uppercase tracking-wider border-b border-neutral-200 pb-1">Technical Properties</span>
-          <div class="grid grid-cols-2 gap-3 text-xs">
-            <div class="flex flex-col gap-0.5">
-              <span class="text-neutral-600">Slug ID</span>
-              <span id="modal-slug" class="font-mono text-neutral-900"></span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <span class="text-neutral-600">Status</span>
-              <span id="modal-status" class="font-medium text-neutral-900"></span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <span class="text-neutral-600">Render Strategy</span>
-              <span id="modal-strategy" class="font-medium text-neutral-900"></span>
-            </div>
-            <div class="flex flex-col gap-0.5">
-              <span class="text-neutral-600">Source Database</span>
-              <span id="modal-source" class="font-medium text-neutral-900"></span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Source Ref -->
+      <div class="flex items-center justify-between gap-3 px-5 pt-3">
+        <h4 id="modal-label" class="text-left text-base font-bold text-neutral-900">Icon Details</h4>
+        <button type="button" id="modal-copy-btn" onclick="copyModalImage()" class="text-xs text-neutral-400 hover:text-neutral-900 transition-colors">copy</button>
+      </div>
+      <div class="px-5 pb-5 pt-4 overflow-y-auto custom-scrollbar flex flex-col gap-4">
         <div class="flex flex-col gap-1.5 text-xs">
-          <span class="text-[10px] text-neutral-600 font-bold uppercase tracking-wider border-b border-neutral-200 pb-1">Source Reference Link/Key</span>
+          <span class="text-[10px] text-neutral-600 font-bold uppercase tracking-wider">Source Reference Link/Key</span>
           <code id="modal-source-ref" class="block bg-neutral-100 p-2.5 rounded-sm border border-neutral-300 font-mono text-neutral-800 break-all select-all"></code>
         </div>
 
-        <!-- Notes / Alert -->
         <div id="modal-notes-container" class="hidden flex gap-3 p-3 bg-accent-ochre/10 border border-accent-ochre/20 text-accent-slate rounded-sm text-xs leading-relaxed">
           <svg class="w-4 h-4 text-accent-ochre flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
@@ -455,10 +317,6 @@ p {
             <span id="modal-notes"></span>
           </div>
         </div>
-      </div>
-      <!-- Modal Footer -->
-      <div class="p-5 border-t border-neutral-200 bg-neutral-100/50 flex items-center justify-end gap-3">
-        <button onclick="closeModal()" class="px-4 py-2 bg-neutral-800 hover:bg-neutral-900 text-white rounded-sm text-xs font-semibold transition-all">Close</button>
       </div>
     </div>
   </div>
@@ -976,9 +834,7 @@ p {
     let iconsData = [];
     let currentProfile = 'notion'; // default
     let activeFilters = {
-      search: '',
-      strategy: 'all',
-      status: 'all'
+      search: ''
     };
 
     // Profiles Configuration matching config/profiles.json
@@ -1028,11 +884,11 @@ p {
       const linearBtn = document.getElementById('profile-btn-linear');
 
       if (profileId === 'notion') {
-        notionBtn.className = "px-3 py-1.5 rounded-sm font-semibold transition-all bg-accent-terracotta text-white shadow-sm flex items-center";
-        linearBtn.className = "px-3 py-1.5 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all flex items-center";
+        notionBtn.className = "text-neutral-900 transition-colors";
+        linearBtn.className = "text-neutral-400 hover:text-neutral-600 transition-colors";
       } else {
-        linearBtn.className = "px-3 py-1.5 rounded-sm font-semibold transition-all bg-accent-terracotta text-white shadow-sm flex items-center";
-        notionBtn.className = "px-3 py-1.5 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all flex items-center";
+        linearBtn.className = "text-neutral-900 transition-colors";
+        notionBtn.className = "text-neutral-400 hover:text-neutral-600 transition-colors";
       }
 
       // Re-render the grid since backgrounds and output paths change!
@@ -1042,15 +898,11 @@ p {
     // Filter controls
     function handleFilterChange() {
       activeFilters.search = document.getElementById('search-input').value.trim().toLowerCase();
-      activeFilters.strategy = document.getElementById('strategy-filter').value;
-      activeFilters.status = document.getElementById('status-filter').value;
       renderGrid();
     }
 
     function resetFilters() {
       document.getElementById('search-input').value = '';
-      document.getElementById('strategy-filter').value = 'all';
-      document.getElementById('status-filter').value = 'all';
       handleFilterChange();
     }
 
@@ -1065,68 +917,41 @@ p {
 
       // Filter icons
       const filtered = iconsData.filter(icon => {
-        // Search filter
-        const matchSearch = !activeFilters.search || 
-          icon.label.toLowerCase().includes(activeFilters.search) ||
+        if (!activeFilters.search) return true;
+        return icon.label.toLowerCase().includes(activeFilters.search) ||
           icon.slug.toLowerCase().includes(activeFilters.search) ||
           (icon.notes && icon.notes.toLowerCase().includes(activeFilters.search));
-
-        // Strategy filter
-        const matchStrategy = activeFilters.strategy === 'all' || icon.strategy === activeFilters.strategy;
-
-        // Status filter
-        const matchStatus = activeFilters.status === 'all' || 
-          (activeFilters.status === 'generated' && icon.status === 'generated') ||
-          (activeFilters.status === 'manual_review' && icon.needsManualReview);
-
-        return matchSearch && matchStrategy && matchStatus;
       });
 
       if (filtered.length === 0) {
         grid.className = "hidden";
-        emptyState.className = "py-16 flex flex-col items-center justify-center text-center bg-neutral-50/20 border border-neutral-300 rounded-sm";
+        emptyState.className = "py-8 text-xs text-neutral-400";
         return;
       }
 
-      grid.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4";
+      grid.className = "grid gap-x-8 gap-y-10 w-full pt-2";
+      grid.style.gridTemplateColumns = "repeat(auto-fill, 8rem)";
       emptyState.className = "hidden";
 
       filtered.forEach(icon => {
-        // Build card element
-        const card = document.createElement('div');
-        card.className = "bg-neutral-50/60 border border-neutral-300 rounded-sm hover:border-neutral-400 transition-all group relative shadow-sm overflow-hidden h-36 grid grid-cols-2 w-full";
+        const item = document.createElement('div');
+        item.className = "group relative flex flex-col w-32 min-w-0 pt-6";
 
-        // Get output image path for the active profile
         const imagePath = icon.outputs[currentProfile] || `dist/${currentProfile}/emoji/${icon.slug}.png`;
 
-        // Render card inner content
-        card.innerHTML = `
-          <!-- Light Theme Pane -->
-          <div class="flex items-center justify-center h-full relative" style="background-color: ${profile.lightBg}">
-            <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:10px_16px] opacity-10"></div>
-            <img src="${imagePath}" alt="${icon.label} light UI" class="w-12 h-12 object-contain z-10 relative transition-transform group-hover:scale-110 duration-200" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'32\\' height=\\'32\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'red\\' stroke-width=\\'2\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><line x1=\\'12\\' y1=\\'8\\' x2=\\'12\\' y2=\\'16\\'/><line x1=\\'8\\' y1=\\'12\\' x2=\\'16\\' y2=\\'12\\'/></svg>'">
+        item.innerHTML = `
+          <span class="absolute top-0 left-0 right-0 text-sm text-neutral-600 truncate opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">${icon.slug}</span>
+          <div class="overflow-hidden w-32 h-32 relative flex items-center justify-center" style="background: linear-gradient(135deg, ${profile.lightBg} 50%, ${profile.darkBg} 50%);">
+            <img src="${imagePath}" alt="${icon.label}" class="w-16 h-16 object-contain relative z-10" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'32\\' height=\\'32\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'red\\' stroke-width=\\'2\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><line x1=\\'12\\' y1=\\'8\\' x2=\\'12\\' y2=\\'16\\'/><line x1=\\'8\\' y1=\\'12\\' x2=\\'16\\' y2=\\'12\\'/></svg>'">
+            <button type="button" onclick="openModalForIcon('${icon.slug}')" class="absolute inset-0 z-20 opacity-0 hover:opacity-100 focus:opacity-100 transition-opacity" title="${icon.slug}"></button>
           </div>
-
-          <!-- Dark Theme Pane -->
-          <div class="flex items-center justify-center h-full relative" style="background-color: ${profile.darkBg}">
-            <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:10px_16px] opacity-5"></div>
-            <img src="${imagePath}" alt="${icon.label} dark UI" class="w-12 h-12 object-contain z-10 relative transition-transform group-hover:scale-110 duration-200">
-          </div>
-
-          <!-- Top Left Name -->
-          <span class="absolute top-2 left-2 font-mono text-[11px] font-bold text-neutral-900 bg-white/85 px-1.5 py-0.5 rounded-sm shadow-sm border border-neutral-200 z-20 pointer-events-none">
-            ${icon.slug}
-          </span>
-
-          <!-- Top Right Details Link -->
-          <button onclick="openModalForIcon('${icon.slug}')" class="absolute top-2 right-2 font-mono text-[11px] font-bold text-white/80 hover:text-white bg-black/60 hover:bg-black/85 px-1.5 py-0.5 rounded-sm border border-white/15 transition-all z-20 shadow-sm" title="Inspect details">
-            &lt;/&gt;
-          </button>
         `;
 
-        grid.appendChild(card);
+        grid.appendChild(item);
       });
     }
+
+    let currentModalImagePath = '';
 
     // Modal Operations
     function openModalForIcon(slug) {
@@ -1135,23 +960,13 @@ p {
 
       const profile = PROFILES[currentProfile];
       const imagePath = icon.outputs[currentProfile] || `dist/${currentProfile}/emoji/${icon.slug}.png`;
+      currentModalImagePath = imagePath;
+      document.getElementById('modal-copy-btn').innerText = 'copy';
 
       // Labels & Strings
-      document.getElementById('modal-label').innerText = `${icon.label} Icon`;
-      document.getElementById('modal-slug').innerText = icon.slug;
-      document.getElementById('modal-status').innerText = icon.status.toUpperCase();
-      document.getElementById('modal-strategy').innerText = icon.strategy.toUpperCase();
-      document.getElementById('modal-source').innerText = icon.sourceType.toUpperCase();
+      document.getElementById('modal-label').innerText = icon.label;
       document.getElementById('modal-source-ref').innerText = icon.sourceRef;
 
-      // Render Strategy color classes
-      let statusClass = 'text-accent-glacier';
-      if (icon.needsManualReview) {
-        statusClass = 'text-accent-terracotta';
-      }
-      document.getElementById('modal-status').className = `font-semibold ${statusClass}`;
-
-      // Preview boxes background styling
       const previewLight = document.getElementById('modal-preview-light');
       const previewDark = document.getElementById('modal-preview-dark');
       previewLight.style.backgroundColor = profile.lightBg;
@@ -1178,6 +993,53 @@ p {
     function closeModal() {
       document.getElementById('details-modal').classList.add('hidden');
       document.body.classList.remove('overflow-hidden');
+    }
+
+    async function copyModalImage() {
+      const btn = document.getElementById('modal-copy-btn');
+      btn.innerText = '…';
+
+      try {
+        const blob = await getModalImageBlob();
+        await navigator.clipboard.write([
+          new ClipboardItem({ 'image/png': blob })
+        ]);
+        btn.innerText = 'copied';
+      } catch {
+        btn.innerText = 'failed';
+      }
+
+      setTimeout(() => { btn.innerText = 'copy'; }, 1200);
+    }
+
+    async function getModalImageBlob() {
+      try {
+        const response = await fetch(currentModalImagePath);
+        if (!response.ok) throw new Error('fetch failed');
+        const blob = await response.blob();
+        if (blob.type === 'image/png') return blob;
+        return blob.slice(0, blob.size, 'image/png');
+      } catch {
+        const img = document.getElementById('modal-img-light');
+        if (!img.complete || !img.naturalWidth) {
+          await new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+          });
+        }
+
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        canvas.getContext('2d').drawImage(img, 0, 0);
+
+        return new Promise((resolve, reject) => {
+          canvas.toBlob((blob) => {
+            if (blob) resolve(blob);
+            else reject(new Error('canvas failed'));
+          }, 'image/png');
+        });
+      }
     }
 
     // Run init on load
