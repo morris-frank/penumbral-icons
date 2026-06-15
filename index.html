@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Penumbral Icons - Theme-Safe Icon Pack</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
 /*
   Maurice Frank - Design Tokens
@@ -277,118 +276,18 @@ p {
   <!-- Header Section -->
   <header class="border-b border-neutral-300 bg-neutral-100/80 backdrop-blur-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-sm bg-gradient-to-tr from-accent-terracotta to-accent-ochre flex items-center justify-center shadow-sm">
-          <i data-lucide="eclipse" class="w-5 h-5 text-white"></i>
-        </div>
-        <div>
-          <h1 class="text-lg font-bold tracking-tight text-neutral-900 flex items-center gap-2">
-            Penumbral Icons
-            <span class="text-[10px] px-2 py-0.5 rounded-sm bg-accent-terracotta/10 border border-accent-terracotta/30 text-accent-terracotta font-medium font-mono uppercase tracking-wider">v0.1.0</span>
-          </h1>
-        </div>
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="https://github.com/morris-frank/penumbral-icons" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors flex items-center gap-2 px-3 py-1.5 rounded-sm hover:bg-neutral-200/60 border border-transparent hover:border-neutral-300">
-          <i data-lucide="github" class="w-4 h-4"></i>
-          GitHub Repository
-        </a>
-      </div>
+      <h1 class="text-lg font-bold tracking-tight text-neutral-900 flex items-center gap-2">
+        morris-frank/penumbral-icons
+      </h1>
+      <a href="https://github.com/morris-frank/penumbral-icons" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors flex items-center gap-2 px-3 py-1.5 rounded-sm hover:bg-neutral-200/60 border border-transparent hover:border-neutral-300">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 .297c-6.63 0-11 5.373-11 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-4.373-12-11-12"></path>
+        </svg></a>
     </div>
   </header>
 
-  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-10">
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-col gap-10">
     
-    <!-- Hero / Explainer -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-neutral-50/50 border border-neutral-300 rounded-sm p-6 sm:p-8 relative overflow-hidden shadow-sm">
-      <!-- Background mesh -->
-      <div class="absolute -right-20 -top-20 w-80 h-80 bg-accent-terracotta/5 rounded-full blur-3xl pointer-events-none"></div>
-      <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-accent-glacier/5 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="lg:col-span-7 flex flex-col gap-4">
-        <div class="inline-flex self-start items-center gap-1.5 px-3 py-1 rounded-sm bg-accent-terracotta/10 border border-accent-terracotta/20 text-accent-terracotta text-xs font-semibold uppercase tracking-wider">
-          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Theme-Safe Asset Generation
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900 leading-tight">
-          Icons that remain visible in <span class="gradient-text">every theme</span>.
-        </h2>
-        <p class="text-neutral-800 text-base leading-relaxed">
-          Custom emojis or app icons uploaded to work collaboration platforms like **Slack, Notion, or Linear** often suffer from a visibility problem. Dark icons become completely invisible in Dark mode, while light icons fade away in Light mode.
-        </p>
-        <p class="text-neutral-600 text-sm leading-relaxed">
-          <strong>Penumbral Icons</strong> builds app-specific theme-safe emoji assets by either composing transparent icons onto an optimized solid-color background block matching the application's native dark interface (blends invisibly in Dark mode, stands out as a neat contrasting square in Light mode), or validating brand/canonical colors for sufficient contrast.
-        </p>
-        
-        <!-- Summary Stats -->
-        <div class="grid grid-cols-3 gap-4 mt-4 border-t border-neutral-300 pt-6">
-          <div class="flex flex-col">
-            <span class="text-2xl sm:text-3xl font-bold text-neutral-900 font-mono" id="stat-total">0</span>
-            <span class="text-xs text-neutral-600 font-medium uppercase tracking-wider mt-1">Total Icons</span>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-2xl sm:text-3xl font-bold text-accent-glacier font-mono" id="stat-generated">0</span>
-            <span class="text-xs text-neutral-600 font-medium uppercase tracking-wider mt-1">Generated</span>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-2xl sm:text-3xl font-bold text-accent-terracotta font-mono" id="stat-review">0</span>
-            <span class="text-xs text-neutral-600 font-medium uppercase tracking-wider mt-1">Needs Review</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Problem/Solution Visual Demo -->
-      <div class="lg:col-span-5 flex flex-col gap-4 bg-neutral-50/80 border border-neutral-300 rounded-sm p-5 shadow-sm relative">
-        <div class="flex items-center justify-between border-b border-neutral-200 pb-3">
-          <h3 class="text-sm font-semibold text-neutral-900 flex items-center gap-1.5">
-            <i data-lucide="presentation" class="w-4 h-4 text-accent-terracotta"></i> Interactive Demo
-          </h3>
-          <div class="flex bg-neutral-200 border border-neutral-300 rounded-sm p-0.5 text-xs">
-            <button id="demo-btn-light" onclick="setDemoTheme('light')" class="px-2.5 py-1 rounded-sm font-semibold text-neutral-900 bg-neutral-50 shadow-sm">Light Mode</button>
-            <button id="demo-btn-dark" onclick="setDemoTheme('dark')" class="px-2.5 py-1 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all">Dark Mode</button>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-4 py-2">
-          <!-- Before / Standard -->
-          <div class="flex items-center justify-between bg-neutral-100/50 border border-neutral-200 rounded-sm p-3">
-            <div class="flex flex-col gap-0.5">
-              <span class="text-xs font-semibold text-neutral-800">Standard Icon</span>
-              <span class="text-[10px] text-neutral-600">Transparent dark-themed PNG</span>
-            </div>
-            <!-- Demo Box -->
-            <div id="demo-standard-box" class="w-14 h-14 rounded-sm bg-white border border-neutral-300 flex items-center justify-center transition-colors duration-300">
-              <!-- Inline dark SVG of GitHub/similar -->
-              <svg id="demo-standard-svg" class="w-8 h-8 text-[#191919] transition-colors duration-300" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 .297c-6.63 0-11 5.373-11 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-4.373-12-11-12"/>
-              </svg>
-            </div>
-          </div>
-
-          <!-- After / Penumbral -->
-          <div class="flex items-center justify-between bg-neutral-100/50 border border-neutral-200 rounded-sm p-3">
-            <div class="flex flex-col gap-0.5">
-              <span class="text-xs font-semibold text-neutral-800">Penumbral (Composed)</span>
-              <span class="text-[10px] text-neutral-600">Tinted light + solid dark background</span>
-            </div>
-            <!-- Demo Box -->
-            <div id="demo-penumbral-box" class="w-14 h-14 rounded-sm bg-white border border-neutral-300 flex items-center justify-center p-2 transition-colors duration-300">
-              <!-- Composed Icon: represents the output image which is a solid #191919 block with a white icon, centered on the page's container -->
-              <div class="w-10 h-10 rounded-sm bg-[#191919] flex items-center justify-center shadow-sm">
-                <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 .297c-6.63 0-11 5.373-11 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-4.373-12-11-12"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-[11px] text-neutral-600 mt-1 border-t border-neutral-200 pt-2 leading-relaxed">
-          <i data-lucide="info" class="w-3.5 h-3.5 inline mr-1 text-accent-terracotta align-middle"></i>
-          Notice that in <strong>Dark Mode</strong>, the composed icon's background matches the theme background, blending in seamlessly to look transparent. In <strong>Light Mode</strong>, the standard icon is visible but the composed icon is also perfectly clear inside its contrasting border block.
-        </div>
-      </div>
-    </section>
-
     <!-- Interactive Grid Area -->
     <section class="flex flex-col gap-6">
       
@@ -398,7 +297,10 @@ p {
         <!-- Search -->
         <div class="relative flex-grow max-w-md">
           <div class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-neutral-400">
-            <i data-lucide="search" class="w-4 h-4"></i>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
           </div>
           <input type="text" id="search-input" oninput="handleFilterChange()" placeholder="Search by name, slug or alias..." class="w-full pl-10 pr-4 py-2 bg-neutral-50 border border-neutral-300 rounded-sm text-sm text-neutral-900 placeholder-neutral-400 focus:outline-none focus:border-accent-terracotta focus:ring-1 focus:ring-accent-terracotta transition-all">
         </div>
@@ -409,11 +311,11 @@ p {
           <div class="flex items-center gap-2">
             <span class="text-xs text-neutral-600 font-medium whitespace-nowrap">App Profile:</span>
             <div class="flex bg-neutral-200 border border-neutral-300 rounded-sm p-0.5 text-xs">
-              <button id="profile-btn-notion" onclick="setAppProfile('notion')" class="px-3 py-1.5 rounded-sm font-semibold transition-all bg-accent-terracotta text-white shadow-sm flex items-center gap-1.5">
-                <i data-lucide="box" class="w-3.5 h-3.5"></i> Notion
+              <button id="profile-btn-notion" onclick="setAppProfile('notion')" class="px-3 py-1.5 rounded-sm font-semibold transition-all bg-accent-terracotta text-white shadow-sm flex items-center">
+                Notion
               </button>
-              <button id="profile-btn-linear" onclick="setAppProfile('linear')" class="px-3 py-1.5 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all flex items-center gap-1.5">
-                <i data-lucide="git-branch" class="w-3.5 h-3.5"></i> Linear
+              <button id="profile-btn-linear" onclick="setAppProfile('linear')" class="px-3 py-1.5 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all flex items-center">
+                Linear
               </button>
             </div>
           </div>
@@ -435,19 +337,6 @@ p {
         </div>
       </div>
 
-      <!-- Quick Explanation of selected profile colors -->
-      <div id="profile-legend" class="text-xs text-neutral-600 flex flex-wrap items-center gap-4 bg-neutral-50/30 border border-neutral-300 rounded-sm px-4 py-2">
-        <span class="font-medium text-neutral-800">Active Profile Colors:</span>
-        <span class="flex items-center gap-1.5">
-          <span id="legend-light-bg" class="w-3 h-3 rounded-sm border border-neutral-300 bg-white inline-block"></span>
-          Light Background: <code id="legend-light-bg-hex" class="font-mono text-neutral-800">#ffffff</code>
-        </span>
-        <span class="flex items-center gap-1.5">
-          <span id="legend-dark-bg" class="w-3 h-3 rounded-sm border border-neutral-800 bg-[#191919] inline-block"></span>
-          Dark Background: <code id="legend-dark-bg-hex" class="font-mono text-neutral-800">#191919</code>
-        </span>
-      </div>
-
       <!-- Main Icons Grid -->
       <div id="icons-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 min-h-[200px]">
         <!-- Cards injected dynamically -->
@@ -460,7 +349,12 @@ p {
       <!-- Empty State -->
       <div id="empty-state" class="hidden py-16 flex flex-col items-center justify-center text-center bg-neutral-50/20 border border-neutral-300 rounded-sm">
         <div class="w-12 h-12 rounded-sm bg-neutral-50 border border-neutral-300 flex items-center justify-center text-neutral-400 mb-4 shadow-sm">
-          <i data-lucide="frown" class="w-6 h-6"></i>
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
         </div>
         <h4 class="text-sm font-semibold text-neutral-900">No icons match your filters</h4>
         <p class="text-xs text-neutral-600 mt-1 max-w-sm">Try adjusting your search terms, app profile, or rendering strategies.</p>
@@ -469,66 +363,15 @@ p {
 
     </section>
 
-    <!-- Strategy Breakdown Section -->
-    <section class="border-t border-neutral-300 pt-10 pb-6">
-      <h3 class="text-xl font-bold text-neutral-900 mb-6 flex items-center gap-2">
-        <i data-lucide="layers" class="w-5 h-5 text-accent-terracotta"></i> Deep Dive: Render Strategies
-      </h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Composed Card -->
-        <div class="bg-neutral-50/50 border border-neutral-300 rounded-sm p-5 flex flex-col gap-3 shadow-sm">
-          <div class="flex items-center gap-2">
-            <span class="px-2 py-0.5 rounded-sm text-[10px] font-mono font-bold tracking-wide uppercase bg-accent-terracotta/10 border border-accent-terracotta/20 text-accent-terracotta">Composed</span>
-            <span class="text-xs font-mono text-neutral-600">composed</span>
-          </div>
-          <h4 class="text-sm font-bold text-neutral-900">Theme-Blended Composition</h4>
-          <p class="text-xs text-neutral-600 leading-relaxed">
-            Designed for monochromatic or single-color icons. The source SVG vector paths are tinted with the application's native <strong>dark foreground</strong> color (like light grey/white). The tinted icon is then overlaid onto a square bounding-box container filled with the application's exact <strong>dark background</strong>.
-          </p>
-          <p class="text-xs text-accent-terracotta font-medium">
-            → Blends invisibly in dark themes; floats as a beautiful square stamp in light themes.
-          </p>
-        </div>
-
-        <!-- Canonical Card -->
-        <div class="bg-neutral-50/50 border border-neutral-300 rounded-sm p-5 flex flex-col gap-3 shadow-sm">
-          <div class="flex items-center gap-2">
-            <span class="px-2 py-0.5 rounded-sm text-[10px] font-mono font-bold tracking-wide uppercase bg-accent-glacier/10 border border-accent-glacier/20 text-accent-glacier">Canonical</span>
-            <span class="text-xs font-mono text-neutral-600">canonical</span>
-          </div>
-          <h4 class="text-sm font-bold text-neutral-900">Contrast-Validated Original</h4>
-          <p class="text-xs text-neutral-600 leading-relaxed">
-            Designed for colorful logos or icons that must preserve their brand identity (e.g., Google Cloud, Gemini, Microsoft). Renders the original, multicolored SVG vector asset. The builder performs contrast checks to verify that the primary brand color maintains at least a <strong>3:1 contrast ratio</strong> on both light and dark targets.
-          </p>
-          <p class="text-xs text-accent-terracotta font-medium">
-            → If contrast fails the threshold, the icon is automatically flagged for manual review.
-          </p>
-        </div>
-
-        <!-- Auto-SVG Card -->
-        <div class="bg-neutral-50/50 border border-neutral-300 rounded-sm p-5 flex flex-col gap-3 shadow-sm">
-          <div class="flex items-center gap-2">
-            <span class="px-2 py-0.5 rounded-sm text-[10px] font-mono font-bold tracking-wide uppercase bg-accent-ochre/10 border border-accent-ochre/20 text-accent-ochre">Auto-SVG</span>
-            <span class="text-xs font-mono text-neutral-600">auto-svg</span>
-          </div>
-          <h4 class="text-sm font-bold text-neutral-900">Dynamic SVG Swapping</h4>
-          <p class="text-xs text-neutral-600 leading-relaxed">
-            The ultimate theme-aware standard. Generates dual light/dark CSS/HTML responsive SVG files. The icons are constructed using CSS classes or dynamic SVG attributes such as <code>currentColor</code> which automatically flip colors based on client-side styles or media queries.
-          </p>
-          <p class="text-xs text-accent-terracotta font-medium">
-            → Perfect for embedding in website frontends or responsive developer integrations.
-          </p>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- Footer Section -->
   <footer class="border-t border-neutral-300 bg-neutral-200/40 py-8 text-xs text-neutral-600 text-center">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-1.5">
-        <i data-lucide="eclipse" class="w-4 h-4 text-accent-terracotta"></i>
+        <svg class="w-4 h-4 text-accent-terracotta" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86z"/>
+        </svg>
         <span>Penumbral Icons &copy; 2026. Built with Sharp, LobeHub Icons, and Simple Icons.</span>
       </div>
       <div>
@@ -544,7 +387,10 @@ p {
       <div class="flex items-center justify-between p-5 border-b border-neutral-200">
         <h4 id="modal-label" class="text-base font-bold text-neutral-900">Icon Details</h4>
         <button onclick="closeModal()" class="w-8 h-8 rounded-sm bg-neutral-200 hover:bg-neutral-300 text-neutral-600 hover:text-neutral-900 flex items-center justify-center transition-all">
-          <i data-lucide="x" class="w-4 h-4"></i>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
         </button>
       </div>
       <!-- Modal Content -->
@@ -599,7 +445,11 @@ p {
 
         <!-- Notes / Alert -->
         <div id="modal-notes-container" class="hidden flex gap-3 p-3 bg-accent-ochre/10 border border-accent-ochre/20 text-accent-slate rounded-sm text-xs leading-relaxed">
-          <i data-lucide="alert-triangle" class="w-4 h-4 text-accent-ochre flex-shrink-0 mt-0.5"></i>
+          <svg class="w-4 h-4 text-accent-ochre flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
           <div>
             <span class="font-semibold block mb-0.5">Manifest Notes</span>
             <span id="modal-notes"></span>
@@ -1151,8 +1001,6 @@ p {
 
     // Initialize Page
     async function init() {
-      lucide.createIcons();
-      
       try {
         // Attempt dynamically loading manifest first
         const response = await fetch('./dist/reports/manifest.json');
@@ -1167,76 +1015,25 @@ p {
         iconsData = EMBEDDED_MANIFEST;
       }
 
-      // Fill Stats
-      renderStats();
-
       // Set App Profile UI
       setAppProfile('notion');
-
-      // Initialize Interactive Demo theme
-      setDemoTheme('light');
-    }
-
-    function renderStats() {
-      document.getElementById('stat-total').innerText = iconsData.length;
-      document.getElementById('stat-generated').innerText = iconsData.filter(i => i.status === 'generated').length;
-      document.getElementById('stat-review').innerText = iconsData.filter(i => i.needsManualReview).length;
-    }
-
-    // Toggle demo theme box in hero
-    function setDemoTheme(theme) {
-      const lightBtn = document.getElementById('demo-btn-light');
-      const darkBtn = document.getElementById('demo-btn-dark');
-      const standardBox = document.getElementById('demo-standard-box');
-      const penumbralBox = document.getElementById('demo-penumbral-box');
-      const standardSvg = document.getElementById('demo-standard-svg');
-
-      if (theme === 'light') {
-        lightBtn.className = "px-2.5 py-1 rounded-sm font-semibold text-neutral-900 bg-neutral-50 shadow-sm";
-        darkBtn.className = "px-2.5 py-1 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all";
-        
-        standardBox.style.backgroundColor = '#ffffff';
-        standardBox.style.borderColor = 'var(--color-neutral-300)';
-        standardSvg.setAttribute('class', 'w-8 h-8 text-[#191919] transition-colors duration-300');
-
-        penumbralBox.style.backgroundColor = '#ffffff';
-        penumbralBox.style.borderColor = 'var(--color-neutral-300)';
-      } else {
-        darkBtn.className = "px-2.5 py-1 rounded-sm font-semibold text-neutral-900 bg-neutral-50 shadow-sm";
-        lightBtn.className = "px-2.5 py-1 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all";
-        
-        standardBox.style.backgroundColor = '#191919';
-        standardBox.style.borderColor = 'var(--color-neutral-800)';
-        // In dark background, a pure #191919 dark transparent logo becomes 100% invisible!
-        standardSvg.setAttribute('class', 'w-8 h-8 text-[#191919] transition-colors duration-300 opacity-20 filter blur-[0.5px]');
-
-        penumbralBox.style.backgroundColor = '#191919';
-        penumbralBox.style.borderColor = 'var(--color-neutral-800)';
-      }
     }
 
     // Update active profile configuration
     function setAppProfile(profileId) {
       currentProfile = profileId;
-      const profile = PROFILES[profileId];
 
       // Update UI Toggles
       const notionBtn = document.getElementById('profile-btn-notion');
       const linearBtn = document.getElementById('profile-btn-linear');
 
       if (profileId === 'notion') {
-        notionBtn.className = "px-3 py-1.5 rounded-sm font-semibold transition-all bg-accent-terracotta text-white shadow-sm flex items-center gap-1.5";
-        linearBtn.className = "px-3 py-1.5 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all flex items-center gap-1.5";
+        notionBtn.className = "px-3 py-1.5 rounded-sm font-semibold transition-all bg-accent-terracotta text-white shadow-sm flex items-center";
+        linearBtn.className = "px-3 py-1.5 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all flex items-center";
       } else {
-        linearBtn.className = "px-3 py-1.5 rounded-sm font-semibold transition-all bg-accent-terracotta text-white shadow-sm flex items-center gap-1.5";
-        notionBtn.className = "px-3 py-1.5 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all flex items-center gap-1.5";
+        linearBtn.className = "px-3 py-1.5 rounded-sm font-semibold transition-all bg-accent-terracotta text-white shadow-sm flex items-center";
+        notionBtn.className = "px-3 py-1.5 rounded-sm font-medium text-neutral-600 hover:text-neutral-900 transition-all flex items-center";
       }
-
-      // Legend Info
-      document.getElementById('legend-light-bg').style.backgroundColor = profile.lightBg;
-      document.getElementById('legend-light-bg-hex').innerText = profile.lightBg;
-      document.getElementById('legend-dark-bg').style.backgroundColor = profile.darkBg;
-      document.getElementById('legend-dark-bg-hex').innerText = profile.darkBg;
 
       // Re-render the grid since backgrounds and output paths change!
       renderGrid();
@@ -1297,72 +1094,38 @@ p {
       filtered.forEach(icon => {
         // Build card element
         const card = document.createElement('div');
-        card.className = "bg-neutral-50/60 border border-neutral-300 rounded-sm p-4 flex flex-col gap-4 hover:border-neutral-400 hover:bg-neutral-50/90 transition-all group relative shadow-sm";
-        
-        // Strategy badge coloring
-        let stratBadgeClass = '';
-        if (icon.strategy === 'composed') stratBadgeClass = 'bg-accent-terracotta/10 border-accent-terracotta/20 text-accent-terracotta';
-        else if (icon.strategy === 'canonical') stratBadgeClass = 'bg-accent-glacier/10 border-accent-glacier/20 text-accent-glacier';
-        else stratBadgeClass = 'bg-accent-ochre/10 border-accent-ochre/20 text-accent-ochre';
+        card.className = "bg-neutral-50/60 border border-neutral-300 rounded-sm hover:border-neutral-400 transition-all group relative shadow-sm overflow-hidden h-36 grid grid-cols-2 w-full";
 
         // Get output image path for the active profile
         const imagePath = icon.outputs[currentProfile] || `dist/${currentProfile}/emoji/${icon.slug}.png`;
 
         // Render card inner content
         card.innerHTML = `
-          <div class="flex items-start justify-between">
-            <div class="flex flex-col gap-0.5">
-              <h4 class="text-sm font-bold text-neutral-900 group-hover:text-accent-terracotta transition-colors">${icon.label}</h4>
-              <span class="text-[11px] font-mono text-neutral-600">${icon.slug}</span>
-            </div>
-            <div class="flex flex-col gap-1 items-end">
-              <span class="px-2 py-0.5 rounded-sm text-[9px] font-mono font-semibold tracking-wider uppercase border ${stratBadgeClass}">
-                ${icon.strategy}
-              </span>
-              ${icon.needsManualReview ? `
-                <span class="px-1.5 py-0.5 rounded-sm text-[8px] font-semibold bg-accent-terracotta/10 border border-accent-terracotta/20 text-accent-terracotta flex items-center gap-0.5">
-                  <span class="w-1 h-1 rounded-full bg-accent-terracotta"></span> Review
-                </span>
-              ` : ''}
-            </div>
+          <!-- Light Theme Pane -->
+          <div class="flex items-center justify-center h-full relative" style="background-color: ${profile.lightBg}">
+            <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:10px_16px] opacity-10"></div>
+            <img src="${imagePath}" alt="${icon.label} light UI" class="w-12 h-12 object-contain z-10 relative transition-transform group-hover:scale-110 duration-200" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'32\\' height=\\'32\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'red\\' stroke-width=\\'2\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><line x1=\\'12\\' y1=\\'8\\' x2=\\'12\\' y2=\\'16\\'/><line x1=\\'8\\' y1=\\'12\\' x2=\\'16\\' y2=\\'12\\'/></svg>'">
           </div>
 
-          <!-- Preview Area: Interleaved Side-by-Side (Light Background / Dark Background) -->
-          <div class="grid grid-cols-2 gap-2 mt-auto">
-            <!-- Light BG preview block -->
-            <div class="flex flex-col gap-1">
-              <span class="text-[9px] font-semibold text-neutral-600 tracking-wider uppercase text-center">Light Theme</span>
-              <div class="h-16 rounded-sm border border-neutral-300 flex items-center justify-center bg-white shadow-inner relative overflow-hidden" style="background-color: ${profile.lightBg}">
-                <!-- Soft grid pattern to signify UI background context -->
-                <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:10px_16px] opacity-10"></div>
-                <img src="${imagePath}" alt="${icon.label} light UI" class="w-8 h-8 object-contain z-10 relative transition-transform group-hover:scale-110 duration-200" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'32\\' height=\\'32\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'red\\' stroke-width=\\'2\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><line x1=\\'12\\' y1=\\'8\\' x2=\\'12\\' y2=\\'16\\'/><line x1=\\'8\\' y1=\\'12\\' x2=\\'16\\' y2=\\'12\\'/></svg>'">
-              </div>
-            </div>
-
-            <!-- Dark BG preview block -->
-            <div class="flex flex-col gap-1">
-              <span class="text-[9px] font-semibold text-neutral-600 tracking-wider uppercase text-center">Dark Theme</span>
-              <div class="h-16 rounded-sm border border-neutral-800 flex items-center justify-center shadow-inner relative overflow-hidden" style="background-color: ${profile.darkBg}">
-                <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:10px_16px] opacity-5"></div>
-                <img src="${imagePath}" alt="${icon.label} dark UI" class="w-8 h-8 object-contain z-10 relative transition-transform group-hover:scale-110 duration-200">
-              </div>
-            </div>
+          <!-- Dark Theme Pane -->
+          <div class="flex items-center justify-center h-full relative" style="background-color: ${profile.darkBg}">
+            <div class="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:10px_16px] opacity-5"></div>
+            <img src="${imagePath}" alt="${icon.label} dark UI" class="w-12 h-12 object-contain z-10 relative transition-transform group-hover:scale-110 duration-200">
           </div>
 
-          <!-- Quick Action Bar -->
-          <div class="flex items-center justify-between border-t border-neutral-200 pt-3 text-[11px] text-neutral-600">
-            <span class="font-mono text-[10px] text-neutral-600 truncate max-w-[120px]">${icon.sourceType}</span>
-            <button onclick="openModalForIcon('${icon.slug}')" class="text-xs font-semibold text-accent-terracotta hover:text-accent-slate flex items-center gap-1 transition-colors">
-              Inspect details <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-            </button>
-          </div>
+          <!-- Top Left Name -->
+          <span class="absolute top-2 left-2 font-mono text-[11px] font-bold text-neutral-900 bg-white/85 px-1.5 py-0.5 rounded-sm shadow-sm border border-neutral-200 z-20 pointer-events-none">
+            ${icon.slug}
+          </span>
+
+          <!-- Top Right Details Link -->
+          <button onclick="openModalForIcon('${icon.slug}')" class="absolute top-2 right-2 font-mono text-[11px] font-bold text-white/80 hover:text-white bg-black/60 hover:bg-black/85 px-1.5 py-0.5 rounded-sm border border-white/15 transition-all z-20 shadow-sm" title="Inspect details">
+            &lt;/&gt;
+          </button>
         `;
 
         grid.appendChild(card);
       });
-
-      // Update newly loaded Lucide icons in generated HTML
-      lucide.createIcons();
     }
 
     // Modal Operations
