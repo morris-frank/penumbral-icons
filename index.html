@@ -246,7 +246,7 @@ p {
 </head>
 <body class="font-sans min-h-screen flex flex-col antialiased selection:bg-accent-terracotta/20 selection:text-neutral-900">
 
-  <main class="flex-grow w-full px-4 sm:px-6 lg:px-8 py-4 flex flex-col gap-4">
+  <main class="flex-grow w-full px-5 sm:px-6 py-4 flex flex-col gap-4">
 
     <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
       <a href="https://github.com/morris-frank/penumbral-icons" target="_blank" rel="noopener noreferrer" class="text-xs text-neutral-600 hover:text-neutral-900 transition-colors w-fit">
@@ -262,7 +262,7 @@ p {
       </div>
     </div>
 
-    <div id="icons-grid" class="grid gap-x-8 gap-y-10 w-full min-h-[120px] pt-2" style="grid-template-columns: repeat(auto-fill, 8rem);">
+    <div id="icons-grid" class="grid gap-x-8 gap-y-10 w-full min-h-[120px] pt-2 justify-center" style="grid-template-columns: repeat(auto-fill, 8rem);">
       <div class="col-span-full py-8 text-xs text-neutral-400">loading…</div>
     </div>
 
@@ -929,7 +929,7 @@ p {
         return;
       }
 
-      grid.className = "grid gap-x-8 gap-y-10 w-full pt-2";
+      grid.className = "grid gap-x-8 gap-y-10 w-full pt-2 justify-center";
       grid.style.gridTemplateColumns = "repeat(auto-fill, 8rem)";
       emptyState.className = "hidden";
 
