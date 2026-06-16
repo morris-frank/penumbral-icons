@@ -4,14 +4,11 @@ import sharp from 'sharp';
 import profiles from '../config/profiles.json' with { type: 'json' };
 import icons from '../config/icons.json' with { type: 'json' };
 import lobeToc from '../node_modules/@lobehub/icons/es/toc.json' with { type: 'json' };
+import { ARTWORK_SIZE, ICON_SIZE } from './constants.mjs';
 
 const rootDir = process.cwd();
-const assetsDir = path.join(rootDir, 'assets');
-const sourceDir = path.join(assetsDir, 'source');
-const generatedDir = path.join(assetsDir, 'generated');
+const sourceDir = path.join(rootDir, 'assets', 'source');
 const distDir = path.join(rootDir, 'dist');
-const iconSize = 128;
-const artworkSize = 84;
 const simpleModule = await import('simple-icons');
 const simpleIcons = Object.values(simpleModule).filter(
   (value) => value && typeof value === 'object' && 'slug' in value,
@@ -25,24 +22,17 @@ function normalizeText(value) {
     .replace(/[^a-z0-9]+/g, '');
 }
 
-function lobeIconCdn(id, { format = 'svg', isDarkMode = false, type = 'color', cdn = 'github' } = {}) {
-  const github = (kind) =>
-    `https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-${kind}`;
-  const aliyun = (kind) => `https://registry.npmmirror.com/@lobehub/icons-static-${kind}/latest/files`;
-  const unpkg = (kind) => `https://unpkg.com/@lobehub/icons-static-${kind}@latest`;
-  const baseUrl = cdn === 'aliyun' ? aliyun(format) : cdn === 'unpkg' ? unpkg(format) : github(format);
+function buildSearchSet(config) {
+  return new Set(
+    [config.slug, config.label, ...(config.aliases || []), ...(config.searchTerms || [])].map(normalizeText),
+  );
+}
 
-  if (format === 'avatar') {
-    return `${baseUrl}/avatars/${id.toLowerCase()}.webp`;
-  }
-
+function lobeIconCdn(id, { type = 'color' } = {}) {
+  const base =
+    'https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-svg/icons';
   const suffix = type === 'mono' ? '' : `-${type}`;
-
-  if (format === 'svg') {
-    return `${baseUrl}/icons/${id.toLowerCase()}${suffix}.svg`;
-  }
-
-  return `${baseUrl}/${isDarkMode ? 'dark' : 'light'}/${id.toLowerCase()}${suffix}.${format}`;
+  return `${base}/${id.toLowerCase()}${suffix}.svg`;
 }
 
 function contrastRatio(hexA, hexB) {
@@ -72,14 +62,6 @@ function hexToRgba(hex, alpha = 1) {
     b: Number.parseInt(clean.slice(4, 6), 16),
     alpha,
   };
-}
-
-function xmlEscape(value) {
-  return String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/"/g, '&quot;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;');
 }
 
 async function ensureDir(dir) {
@@ -129,7 +111,7 @@ function findSimpleIcon(config) {
   const direct = (config.simpleIconCandidates || []).find((candidate) => simpleIconsBySlug.has(candidate));
   if (direct) return simpleIconsBySlug.get(direct);
 
-  const wanted = new Set([config.slug, config.label, ...(config.aliases || []), ...(config.searchTerms || [])].map(normalizeText));
+  const wanted = buildSearchSet(config);
   return simpleIcons.find((icon) => {
     const values = [icon.slug, icon.title, icon.source].map(normalizeText);
     return values.some((value) => wanted.has(value));
@@ -140,7 +122,7 @@ function findLobeEntry(config) {
   const direct = (config.lobeCandidates || []).find((candidate) => lobeToc.some((entry) => entry.id === candidate));
   if (direct) return lobeToc.find((entry) => entry.id === direct);
 
-  const wanted = new Set([config.slug, config.label, ...(config.aliases || []), ...(config.searchTerms || [])].map(normalizeText));
+  const wanted = buildSearchSet(config);
   return lobeToc.find((entry) =>
     [entry.id, entry.title, entry.fullTitle, entry.desc]
       .filter(Boolean)
@@ -160,11 +142,11 @@ async function resolveFromLobe(config) {
 
   for (const type of typeCandidates) {
     try {
-      const svg = await fetchText(lobeIconCdn(entry.id, { format: 'svg', type }));
+      const svg = await fetchText(lobeIconCdn(entry.id, { type }));
       return {
         sourceType: 'lobehub',
         sourceRef: entry.id,
-        sourceUrl: lobeIconCdn(entry.id, { format: 'svg', type }),
+        sourceUrl: lobeIconCdn(entry.id, { type }),
         brandHex: entry.color || null,
         variant: type,
         svg,
@@ -266,7 +248,10 @@ function svgToCurrentColor(svg, profile) {
   });
 
   return rootWithTheme
-    .replace(/<svg\b([^>]*)>/i, `<svg$1><g style="fill:light-dark(${profile.lightFg},${profile.darkFg});stroke:light-dark(${profile.lightFg},${profile.darkFg})">`)
+    .replace(
+      /<svg\b([^>]*)>/i,
+      `<svg$1><g style="fill:light-dark(${profile.lightFg},${profile.darkFg});stroke:light-dark(${profile.lightFg},${profile.darkFg})">`,
+    )
     .replace(/<\/svg>/i, '</g></svg>');
 }
 
@@ -293,61 +278,51 @@ async function writeSourceArtifacts(slug, resolved) {
 
 async function renderCanonicalPng(svg) {
   return sharp(Buffer.from(svg))
-    .resize(iconSize, iconSize, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .resize(ICON_SIZE, ICON_SIZE, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .png()
     .toBuffer();
 }
 
-async function renderComposedPng(svg, fgHex, bgHex) {
-  const rendered = await sharp(Buffer.from(svg))
-    .resize(artworkSize, artworkSize, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-    .ensureAlpha()
-    .raw()
-    .toBuffer({ resolveWithObject: true });
+async function renderComposedPng(svg, bgHex, fgHex = null) {
+  let iconLayer;
 
-  const tinted = Buffer.alloc(rendered.info.width * rendered.info.height * 4);
-  const fg = hexToRgba(fgHex, 1);
+  if (fgHex) {
+    const rendered = await sharp(Buffer.from(svg))
+      .resize(ARTWORK_SIZE, ARTWORK_SIZE, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .ensureAlpha()
+      .raw()
+      .toBuffer({ resolveWithObject: true });
 
-  for (let index = 0; index < rendered.data.length; index += 4) {
-    tinted[index] = fg.r;
-    tinted[index + 1] = fg.g;
-    tinted[index + 2] = fg.b;
-    tinted[index + 3] = rendered.data[index + 3];
+    const tinted = Buffer.alloc(rendered.info.width * rendered.info.height * 4);
+    const fg = hexToRgba(fgHex, 1);
+
+    for (let index = 0; index < rendered.data.length; index += 4) {
+      tinted[index] = fg.r;
+      tinted[index + 1] = fg.g;
+      tinted[index + 2] = fg.b;
+      tinted[index + 3] = rendered.data[index + 3];
+    }
+
+    iconLayer = await sharp(tinted, {
+      raw: {
+        width: rendered.info.width,
+        height: rendered.info.height,
+        channels: 4,
+      },
+    })
+      .png()
+      .toBuffer();
+  } else {
+    iconLayer = await sharp(Buffer.from(svg))
+      .resize(ARTWORK_SIZE, ARTWORK_SIZE, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+      .png()
+      .toBuffer();
   }
 
-  const iconLayer = await sharp(tinted, {
-    raw: {
-      width: rendered.info.width,
-      height: rendered.info.height,
-      channels: 4,
-    },
-  })
-    .png()
-    .toBuffer();
-
   return sharp({
     create: {
-      width: iconSize,
-      height: iconSize,
-      channels: 4,
-      background: hexToRgba(bgHex, 1),
-    },
-  })
-    .composite([{ input: iconLayer, gravity: 'center' }])
-    .png()
-    .toBuffer();
-}
-
-async function renderPreservedColorComposedPng(svg, bgHex) {
-  const iconLayer = await sharp(Buffer.from(svg))
-    .resize(artworkSize, artworkSize, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
-    .png()
-    .toBuffer();
-
-  return sharp({
-    create: {
-      width: iconSize,
-      height: iconSize,
+      width: ICON_SIZE,
+      height: ICON_SIZE,
       channels: 4,
       background: hexToRgba(bgHex, 1),
     },
@@ -415,8 +390,8 @@ async function buildIcon(config) {
       config.strategy === 'canonical'
         ? await renderCanonicalPng(resolved.svg)
         : config.compositionMode === 'preserve-color'
-          ? await renderPreservedColorComposedPng(resolved.svg, profile.darkBg)
-          : await renderComposedPng(resolved.svg, profile.darkFg, profile.darkBg);
+          ? await renderComposedPng(resolved.svg, profile.darkBg)
+          : await renderComposedPng(resolved.svg, profile.darkBg, profile.darkFg);
 
     const pngPath = path.join(profileDir, `${config.slug}.png`);
     await fs.writeFile(pngPath, pngBuffer);
@@ -431,7 +406,6 @@ async function buildIcon(config) {
       const autoSvg = svgToCurrentColor(resolved.svg, profile);
       const autoPath = path.join(autoDir, `${config.slug}.svg`);
       await fs.writeFile(autoPath, autoSvg, 'utf8');
-      await fs.writeFile(path.join(generatedDir, `${config.slug}-${profile.id}-auto.svg`), autoSvg, 'utf8');
       outputs.autoSvg[profile.id] = path.relative(rootDir, autoPath);
     }
   }
@@ -479,7 +453,6 @@ async function writeManifest(entries) {
 
 async function main() {
   await ensureDir(sourceDir);
-  await resetDir(generatedDir);
   await resetDir(distDir);
 
   const manifest = [];

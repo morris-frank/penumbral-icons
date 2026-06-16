@@ -2,411 +2,563 @@
   {
     "slug": "anthropic",
     "label": "Anthropic",
-    "aliases": ["anthropic"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["anthropic"],
+    "aliases": [
+      "anthropic"
+    ],
+    "searchTerms": [
+      "anthropic"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["Anthropic"],
-    "simpleIconCandidates": ["anthropic"],
+    "lobeCandidates": [
+      "Anthropic"
+    ],
+    "simpleIconCandidates": [
+      "anthropic"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "claude",
     "label": "Claude",
-    "aliases": ["anthropic claude", "claude"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["claude", "anthropic claude"],
+    "aliases": [
+      "anthropic claude",
+      "claude"
+    ],
+    "searchTerms": [
+      "claude",
+      "anthropic claude"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["Claude"],
-    "simpleIconCandidates": ["claude"],
+    "lobeCandidates": [
+      "Claude"
+    ],
+    "simpleIconCandidates": [
+      "claude"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "clerk",
     "label": "Clerk",
-    "aliases": ["clerk"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["clerk"],
+    "aliases": [
+      "clerk"
+    ],
+    "searchTerms": [
+      "clerk"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["clerk"],
+    "simpleIconCandidates": [
+      "clerk"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "cursor",
     "label": "Cursor",
-    "aliases": ["cursor"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["cursor", "cursor ai"],
+    "aliases": [
+      "cursor"
+    ],
+    "searchTerms": [
+      "cursor",
+      "cursor ai"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["cursor"],
+    "simpleIconCandidates": [
+      "cursor"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "github",
     "label": "GitHub",
-    "aliases": ["github"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["github"],
+    "aliases": [
+      "github"
+    ],
+    "searchTerms": [
+      "github"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["Github"],
-    "simpleIconCandidates": ["github"],
+    "lobeCandidates": [
+      "Github"
+    ],
+    "simpleIconCandidates": [
+      "github"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "google-cloud",
     "label": "Google Cloud",
-    "aliases": ["google cloud platform", "gcp"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["google cloud", "google cloud platform", "gcp"],
+    "aliases": [
+      "google cloud platform",
+      "gcp"
+    ],
+    "searchTerms": [
+      "google cloud",
+      "google cloud platform",
+      "gcp"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["GoogleCloud"],
-    "simpleIconCandidates": ["googlecloud"],
+    "lobeCandidates": [
+      "GoogleCloud"
+    ],
+    "simpleIconCandidates": [
+      "googlecloud"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "google-earth-engine",
     "label": "Google Earth Engine",
-    "aliases": ["google earth engine"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["google earth engine"],
+    "aliases": [
+      "google earth engine"
+    ],
+    "searchTerms": [
+      "google earth engine"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["googleearthengine"],
+    "simpleIconCandidates": [
+      "googleearthengine"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "gemini",
     "label": "Gemini",
-    "aliases": ["google gemini", "gemini"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["gemini", "google gemini"],
+    "aliases": [
+      "google gemini",
+      "gemini"
+    ],
+    "searchTerms": [
+      "gemini",
+      "google gemini"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["Gemini"],
-    "simpleIconCandidates": ["googlegemini", "gemini"],
+    "lobeCandidates": [
+      "Gemini"
+    ],
+    "simpleIconCandidates": [
+      "googlegemini",
+      "gemini"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "grok",
     "label": "Grok",
-    "aliases": ["grok", "xai grok"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["grok", "xai", "grok ai"],
+    "aliases": [
+      "grok",
+      "xai grok"
+    ],
+    "searchTerms": [
+      "grok",
+      "xai",
+      "grok ai"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["XAI"],
-    "simpleIconCandidates": ["xai"],
+    "lobeCandidates": [
+      "XAI"
+    ],
+    "simpleIconCandidates": [
+      "xai"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "hubspot",
     "label": "HubSpot",
-    "aliases": ["hubspot"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["hubspot"],
+    "aliases": [
+      "hubspot"
+    ],
+    "searchTerms": [
+      "hubspot"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["hubspot"],
+    "simpleIconCandidates": [
+      "hubspot"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "hugging-face",
     "label": "Hugging Face",
-    "aliases": ["hugging face"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["hugging face", "huggingface"],
+    "aliases": [
+      "hugging face"
+    ],
+    "searchTerms": [
+      "hugging face",
+      "huggingface"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["HuggingFace"],
-    "simpleIconCandidates": ["huggingface"],
+    "lobeCandidates": [
+      "HuggingFace"
+    ],
+    "simpleIconCandidates": [
+      "huggingface"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "infisical",
     "label": "Infisical",
-    "aliases": ["infisical"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["infisical"],
+    "aliases": [
+      "infisical"
+    ],
+    "searchTerms": [
+      "infisical"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["infisical"],
-    "officialUrlCandidates": ["https://raw.githubusercontent.com/Infisical/infisical/main/frontend/public/images/gradientLogo.svg"]
+    "simpleIconCandidates": [
+      "infisical"
+    ],
+    "officialUrlCandidates": [
+      "https://raw.githubusercontent.com/Infisical/infisical/main/frontend/public/images/gradientLogo.svg"
+    ]
   },
   {
     "slug": "inngest",
     "label": "Inngest",
-    "aliases": ["inngest"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["inngest"],
+    "aliases": [
+      "inngest"
+    ],
+    "searchTerms": [
+      "inngest"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["inngest"],
-    "officialUrlCandidates": ["https://www.inngest.com/logo-with-icon-white.svg"]
+    "simpleIconCandidates": [
+      "inngest"
+    ],
+    "officialUrlCandidates": [
+      "https://www.inngest.com/logo-with-icon-white.svg"
+    ]
   },
   {
     "slug": "jira",
     "label": "Jira",
-    "aliases": ["jira"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["jira", "atlassian jira"],
+    "aliases": [
+      "jira"
+    ],
+    "searchTerms": [
+      "jira",
+      "atlassian jira"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["jira"],
+    "simpleIconCandidates": [
+      "jira"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "linear",
     "label": "Linear",
-    "aliases": ["linear"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["linear"],
+    "aliases": [
+      "linear"
+    ],
+    "searchTerms": [
+      "linear"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["Linear"],
-    "simpleIconCandidates": ["linear"],
+    "lobeCandidates": [
+      "Linear"
+    ],
+    "simpleIconCandidates": [
+      "linear"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "microsoft",
     "label": "Microsoft",
-    "aliases": ["microsoft"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["microsoft"],
+    "aliases": [
+      "microsoft"
+    ],
+    "searchTerms": [
+      "microsoft"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["Microsoft"],
-    "simpleIconCandidates": ["microsoft"],
+    "lobeCandidates": [
+      "Microsoft"
+    ],
+    "simpleIconCandidates": [
+      "microsoft"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "microsoft-excel",
     "label": "Microsoft Excel",
-    "aliases": ["excel", "microsoft excel"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["microsoft excel", "excel"],
+    "aliases": [
+      "excel",
+      "microsoft excel"
+    ],
+    "searchTerms": [
+      "microsoft excel",
+      "excel"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
     "contrastColor": "#107c41",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["microsoftexcel"],
-    "officialUrlCandidates": ["https://upload.wikimedia.org/wikipedia/commons/e/e3/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg"]
+    "simpleIconCandidates": [
+      "microsoftexcel"
+    ],
+    "officialUrlCandidates": [
+      "https://upload.wikimedia.org/wikipedia/commons/e/e3/Microsoft_Office_Excel_%282019%E2%80%932025%29.svg"
+    ]
   },
   {
     "slug": "microsoft-powerpoint",
     "label": "Microsoft PowerPoint",
-    "aliases": ["powerpoint", "microsoft powerpoint"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["microsoft powerpoint", "powerpoint"],
+    "aliases": [
+      "powerpoint",
+      "microsoft powerpoint"
+    ],
+    "searchTerms": [
+      "microsoft powerpoint",
+      "powerpoint"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
     "contrastColor": "#d24726",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["microsoftpowerpoint"],
-    "officialUrlCandidates": ["https://upload.wikimedia.org/wikipedia/commons/2/25/Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg"]
+    "simpleIconCandidates": [
+      "microsoftpowerpoint"
+    ],
+    "officialUrlCandidates": [
+      "https://upload.wikimedia.org/wikipedia/commons/2/25/Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg"
+    ]
   },
   {
     "slug": "microsoft-teams",
     "label": "Microsoft Teams",
-    "aliases": ["teams", "microsoft teams"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["microsoft teams", "teams"],
+    "aliases": [
+      "teams",
+      "microsoft teams"
+    ],
+    "searchTerms": [
+      "microsoft teams",
+      "teams"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
     "contrastColor": "#6264a7",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["microsoftteams"],
-    "officialUrlCandidates": ["https://upload.wikimedia.org/wikipedia/commons/9/94/Microsoft_Office_Teams_%282019%E2%80%932025%29.svg"]
+    "simpleIconCandidates": [
+      "microsoftteams"
+    ],
+    "officialUrlCandidates": [
+      "https://upload.wikimedia.org/wikipedia/commons/9/94/Microsoft_Office_Teams_%282019%E2%80%932025%29.svg"
+    ]
   },
   {
     "slug": "microsoft-word",
     "label": "Microsoft Word",
-    "aliases": ["word", "microsoft word"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["microsoft word", "word"],
+    "aliases": [
+      "word",
+      "microsoft word"
+    ],
+    "searchTerms": [
+      "microsoft word",
+      "word"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "contrastColor": "#185abd",
     "compositionMode": "preserve-color",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["microsoftword"],
-    "officialUrlCandidates": ["https://upload.wikimedia.org/wikipedia/commons/1/19/Microsoft_Office_Word_%282019%E2%80%932025%29.svg"]
+    "simpleIconCandidates": [
+      "microsoftword"
+    ],
+    "officialUrlCandidates": [
+      "https://upload.wikimedia.org/wikipedia/commons/1/19/Microsoft_Office_Word_%282019%E2%80%932025%29.svg"
+    ]
   },
   {
     "slug": "n8n",
     "label": "n8n",
-    "aliases": ["n8n"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["n8n"],
+    "aliases": [
+      "n8n"
+    ],
+    "searchTerms": [
+      "n8n"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["n8n"],
+    "simpleIconCandidates": [
+      "n8n"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "neon",
     "label": "Neon",
-    "aliases": ["neon"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["neon database", "neon"],
+    "aliases": [
+      "neon"
+    ],
+    "searchTerms": [
+      "neon database",
+      "neon"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["neondatabase"],
+    "simpleIconCandidates": [
+      "neondatabase"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "nextjs",
     "label": "Next.js",
-    "aliases": ["next.js", "nextjs"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["next.js", "nextjs"],
+    "aliases": [
+      "next.js",
+      "nextjs"
+    ],
+    "searchTerms": [
+      "next.js",
+      "nextjs"
+    ],
     "strategy": "auto-svg",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["nextdotjs"],
+    "simpleIconCandidates": [
+      "nextdotjs"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "notebooklm",
     "label": "NotebookLM",
-    "aliases": ["notebooklm"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["notebooklm", "notebook lm"],
+    "aliases": [
+      "notebooklm"
+    ],
+    "searchTerms": [
+      "notebooklm",
+      "notebook lm"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["notebooklm"],
+    "simpleIconCandidates": [
+      "notebooklm"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "notion",
     "label": "Notion",
-    "aliases": ["notion"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["notion"],
+    "aliases": [
+      "notion"
+    ],
+    "searchTerms": [
+      "notion"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["notion"],
+    "simpleIconCandidates": [
+      "notion"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "onedrive",
     "label": "OneDrive",
-    "aliases": ["onedrive"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["onedrive", "microsoft onedrive"],
+    "aliases": [
+      "onedrive"
+    ],
+    "searchTerms": [
+      "onedrive",
+      "microsoft onedrive"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "contrastColor": "#0364b8",
     "compositionMode": "preserve-color",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["microsoftonedrive"],
-    "officialUrlCandidates": ["https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_OneDrive_Icon_(2025_-_present).svg"]
+    "simpleIconCandidates": [
+      "microsoftonedrive"
+    ],
+    "officialUrlCandidates": [
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_OneDrive_Icon_(2025_-_present).svg"
+    ]
   },
   {
     "slug": "openrouter",
     "label": "OpenRouter",
-    "aliases": ["open router", "openrouter"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["openrouter", "open router"],
+    "aliases": [
+      "open router",
+      "openrouter"
+    ],
+    "searchTerms": [
+      "openrouter",
+      "open router"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["OpenRouter"],
-    "simpleIconCandidates": ["openrouter"],
+    "lobeCandidates": [
+      "OpenRouter"
+    ],
+    "simpleIconCandidates": [
+      "openrouter"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "openai",
     "label": "OpenAI",
-    "aliases": ["openai"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["openai"],
+    "aliases": [
+      "openai"
+    ],
+    "searchTerms": [
+      "openai"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["OpenAI"],
-    "simpleIconCandidates": ["openai"],
+    "lobeCandidates": [
+      "OpenAI"
+    ],
+    "simpleIconCandidates": [
+      "openai"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "codex",
     "label": "Codex",
-    "aliases": ["openai codex", "codex"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["openai codex", "codex"],
+    "aliases": [
+      "openai codex",
+      "codex"
+    ],
+    "searchTerms": [
+      "openai codex",
+      "codex"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "No canonical Codex icon expected; OpenAI fallback may be used.",
     "lobeCandidates": [],
     "simpleIconCandidates": [],
@@ -415,100 +567,127 @@
   {
     "slug": "oxford-nanopore",
     "label": "Oxford Nanopore",
-    "aliases": ["oxford nanopore"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["oxford nanopore"],
+    "aliases": [
+      "oxford nanopore"
+    ],
+    "searchTerms": [
+      "oxford nanopore"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
     "simpleIconCandidates": [],
-    "officialUrlCandidates": ["https://nanoporetech.com/nano-assets/ont-logo.svg"]
+    "officialUrlCandidates": [
+      "https://nanoporetech.com/nano-assets/ont-logo.svg"
+    ]
   },
   {
     "slug": "postgres",
     "label": "Postgres",
-    "aliases": ["postgres", "postgresql"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["postgres", "postgresql"],
+    "aliases": [
+      "postgres",
+      "postgresql"
+    ],
+    "searchTerms": [
+      "postgres",
+      "postgresql"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["postgresql"],
+    "simpleIconCandidates": [
+      "postgresql"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "sentry",
     "label": "Sentry",
-    "aliases": ["sentry"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["sentry"],
+    "aliases": [
+      "sentry"
+    ],
+    "searchTerms": [
+      "sentry"
+    ],
     "strategy": "auto-svg",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["sentry"],
+    "simpleIconCandidates": [
+      "sentry"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "shadcn",
     "label": "shadcn/ui",
-    "aliases": ["shadcn", "shadcn/ui"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["shadcn", "shadcn ui"],
+    "aliases": [
+      "shadcn",
+      "shadcn/ui"
+    ],
+    "searchTerms": [
+      "shadcn",
+      "shadcn ui"
+    ],
     "strategy": "auto-svg",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["shadcnui"],
+    "simpleIconCandidates": [
+      "shadcnui"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "snakemake",
     "label": "Snakemake",
-    "aliases": ["snakemake"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["snakemake"],
+    "aliases": [
+      "snakemake"
+    ],
+    "searchTerms": [
+      "snakemake"
+    ],
     "strategy": "composed",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
     "simpleIconCandidates": [],
-    "officialUrlCandidates": ["https://snakemake.github.io"],
+    "officialUrlCandidates": [
+      "https://snakemake.github.io"
+    ],
     "officialInlineSvgPattern": "docname=\"logo-snake.svg\""
   },
   {
     "slug": "vercel",
     "label": "Vercel",
-    "aliases": ["vercel"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["vercel"],
+    "aliases": [
+      "vercel"
+    ],
+    "searchTerms": [
+      "vercel"
+    ],
     "strategy": "auto-svg",
-    "profileOverrides": {},
     "notes": "",
-    "lobeCandidates": ["Vercel"],
-    "simpleIconCandidates": ["vercel"],
+    "lobeCandidates": [
+      "Vercel"
+    ],
+    "simpleIconCandidates": [
+      "vercel"
+    ],
     "officialUrlCandidates": []
   },
   {
     "slug": "vite",
     "label": "Vite",
-    "aliases": ["vite"],
-    "source": "auto",
-    "sourceId": null,
-    "searchTerms": ["vite"],
+    "aliases": [
+      "vite"
+    ],
+    "searchTerms": [
+      "vite"
+    ],
     "strategy": "canonical",
-    "profileOverrides": {},
     "notes": "",
     "lobeCandidates": [],
-    "simpleIconCandidates": ["vite"],
+    "simpleIconCandidates": [
+      "vite"
+    ],
     "officialUrlCandidates": []
   }
 ]

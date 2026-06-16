@@ -4,6 +4,7 @@ import sharp from 'sharp';
 import icons from '../config/icons.json' with { type: 'json' };
 import profiles from '../config/profiles.json' with { type: 'json' };
 import manifest from '../dist/reports/manifest.json' with { type: 'json' };
+import { ICON_SIZE } from './constants.mjs';
 
 const rootDir = process.cwd();
 const failures = [];
@@ -35,7 +36,7 @@ for (const icon of icons) {
     const pngPath = path.join(rootDir, rel);
     try {
       const metadata = await sharp(pngPath).metadata();
-      if (metadata.width !== 128 || metadata.height !== 128) {
+      if (metadata.width !== ICON_SIZE || metadata.height !== ICON_SIZE) {
         fail(`Unexpected PNG size for ${icon.slug} (${profile.id}): ${metadata.width}x${metadata.height}`);
       }
     } catch (error) {

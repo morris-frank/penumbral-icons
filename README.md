@@ -13,7 +13,7 @@ npm run build
 
 ## Config
 
-- `config/icons.json`: icon registry, source hints, render strategy, and optional overrides
+- `config/icons.json`: icon registry, source hints, and render strategy
 - `config/profiles.json`: app profiles with background and foreground colors
 
 ## Output
